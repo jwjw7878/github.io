@@ -1,0 +1,581 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@100..900&family=Outfit:wght@100..900&family=Pacifico&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+}
+menu {
+  list-style: none;
+}
+header {
+  position: relative;
+  background-image: url(../images/frank-mckenna-R7YtoUH3x8Y-unsplash.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+header .banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.705);
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 2;
+  font-family: "Noto Sans KR", sans-serif;
+}
+header .banner i {
+  position: absolute;
+  right: 60px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+header nav {
+  position: absolute;
+  z-index: 5;
+  top: 44px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  line-height: 60px;
+  color: #fff;
+  font-family: "Pacifico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+nav .logo {
+  font-size: 20px;
+}
+nav menu {
+  display: flex;
+}
+nav li {
+  position: relative;
+  margin: 0 10px;
+}
+nav li > .submenu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  z-index: 10;
+}
+nav a {
+  color: #fff;
+}
+nav i {
+  margin: 0 10px;
+}
+nav:hover {
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.705);
+}
+header .header-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header h1 {
+  color: #fff;
+  font-family: "Lobster", cursive;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+}
+header h1:first-of-type {
+  margin-top: 100px;
+}
+header button {
+  display: block;
+  background-color: rgb(235, 167, 42);
+  color: #333;
+  border: 0;
+  font-family: "Lobster", cursive;
+  font-size: 24px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 18px;
+  cursor: pointer;
+}
+header .sales-banner {
+  position: absolute; /* absolute로 변경 */
+  bottom: 60px; /* 원하는 위치로 조정 */
+  right: 40px; /* 오른쪽 끝에서 40px 떨어짐 */
+  width: 300px;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 8px 0;
+  border-radius: 18px;
+  font-family: "Outfit";
+}
+.sales-banner img {
+  width: 80px;
+  rotate: 90deg;
+  display: block;
+  margin: auto;
+}
+.sales-banner .text {
+  margin: 0 10px;
+  font-size: 28px;
+}
+.sales-banner .sale-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 30%;
+  color: #fff;
+  padding: 10px;
+  background-color: rgb(240, 62, 62);
+}
+.sales-banner .circle {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.sales-banner i {
+  font-size: 32px;
+  color: #fff;
+}
+header .discount-popup {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 10px 4px;
+  border-radius: 18px;
+  background-image: url("../images/nico-bhlr-QT-l619id6w-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.discount-popup .discount-logo {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  background-color: rgb(240, 62, 62);
+  color: white;
+}
+.discount-popup p {
+  margin-top: 100px;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  font-family: "Outfit";
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+}
+.discount-popup button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #333;
+  border: 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.discount-popup button:hover {
+  background-color: rgb(235, 167, 42);
+}
+.discount-popup i {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 32px;
+  text-shadow: 2px 2px black;
+}
+main {
+  width: 100%;
+  height: auto;
+  background-color: #f0f0f0;
+  font-family: "Lobster", cursive;
+}
+main section {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+main section h2 {
+  margin: 20px 200px;
+  /* font-family: "outfit", sans-serif; */
+  color: rgb(19, 46, 90);
+  font-size: 36px;
+}
+.contents {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.content {
+  width: 30%;
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Outfit", sans-serif;
+}
+.content img {
+  display: block;
+  width: 80%;
+  margin: 30px auto;
+  height: 250px;
+  object-fit: cover;
+}
+.content p:first-of-type {
+  width: 80%;
+  font-size: 20px;
+  margin: 10px auto;
+}
+.content p:last-of-type {
+  width: 80px;
+  padding: 10px;
+  font-size: 16px;
+  color: rgb(19, 46, 90);
+  border: 2px solid rgb(19, 46, 90);
+  border-radius: 20px;
+  margin: 28px;
+  text-align: center;
+  cursor: pointer;
+}
+.best-items {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+.best-items h2 {
+  margin: 80px 200px;
+  /* font-family: "Outfit", sans-serif; */
+  color: rgb(19, 46, 90);
+  font-size: 36px;
+}
+.best-items menu {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+.best-items menu li a {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  color: rgb(129, 129, 129);
+}
+.best-items menu li a.active {
+  color: rgb(19, 46, 90);
+}
+.best-items .items {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.best-items .item {
+  position: relative;
+  width: 15%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+}
+.best-items .item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.best-items .item p:first-of-type {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.best-items .item p:nth-of-type(2) {
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+}
+.best-items .item p:nth-of-type(2) span:nth-child(1) {
+  color: rgb(109, 109, 109);
+  font-size: 14px;
+  margin-right: 10px;
+  text-decoration: line-through;
+}
+.best-items .item p:nth-of-type(2) span:nth-child(2) {
+  color: rgb(19, 46, 90);
+}
+.best-items .item p:nth-of-type(2) span:nth-child(3) {
+  position: absolute;
+  left: 0;
+  color: rgb(240, 62, 62);
+  font-weight: bold;
+}
+.best-items .item p:nth-of-type(3) {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.best-items .item p:nth-of-type(3) span {
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgb(19, 46, 90);
+  color: #fff;
+  cursor: pointer;
+}
+.best-items .item p:nth-of-type(3) span:hover {
+  background-color: #fff;
+  color: rgb(19, 46, 90);
+}
+.best-items .item p.rank {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  text-shadow: 2px 2px black;
+}
+.best-items .item p.rank.first {
+  color: rgb(19, 46, 90);
+  text-shadow: 2px 2px white;
+}
+.review-section {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+.review-section h2 {
+  margin: 100px 200px;
+  /* font-family: "Outfit", sans-serif; */
+  color: rgb(19, 46, 90);
+  font-size: 36px;
+}
+.swiper {
+  width: 90%;
+  height: 400px;
+}
+.swiper-slide.review {
+  width: 300px;
+  background: #fff;
+  font-size: 24px;
+  color: #000;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Outfit", sans-serif;
+}
+.swiper-slide.review .profile {
+  margin: 50px auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  margin-bottom: 10px;
+}
+.profile1 {
+  background-image: url("../images/surfboard1.png");
+  background-size: cover;
+}
+.profile2 {
+  background-image: url("../images/surfboard2.png");
+  background-size: cover;
+}
+.profile3 {
+  background-image: url("../images/surfboard3.png");
+  background-size: cover;
+}
+.profile4 {
+  background-image: url("../images/surfboard4.png");
+  background-size: cover;
+}
+.profile5 {
+  background-image: url("../images/surfboard5.png");
+  background-size: cover;
+}
+.swiper-slide.review .rate {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.swiper-slide.review .rate span {
+  color: #f39c12;
+  font-size: 20px;
+}
+.swiper-slide.review .nickname {
+  font-size: 16px;
+  color: #919191;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.swiper-slide.review .product {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+.swiper-slide.review .text {
+  font-size: 16px;
+  text-align: center;
+  padding: 0 10px;
+}
+.swiper-button-next {
+  color: #fff;
+  background-color: rgb(19, 46, 90);
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+.swiper-button-prev {
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  background-color: rgb(19, 46, 90);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 12px;
+}
+.ad-section {
+  padding: 200px 0;
+}
+.ad-section .swiper {
+  width: 100vw;
+  min-width: 100vw;
+  height: 200px;
+  background-color: #333;
+  transition-timing-function: ease-in-out;
+}
+.ad-section .swiper-wrapper {
+  transition-timing-function: linear !important;
+  position: relative;
+}
+.ad-section .swiper-slide {
+  width: 200px;
+  height: 80%;
+  margin: auto 50px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+.swiper-slide:nth-child(1),
+.swiper-slide:nth-child(5),
+.swiper-slide:nth-child(9) {
+  font-family: "Pacifico", sans-serif;
+}
+.swiper-slide:nth-child(2),
+.swiper-slide:nth-child(6) {
+  font-family: "Lobster", cursive;
+}
+.swiper-slide:nth-child(3),
+.swiper-slide:nth-child(7) {
+  font-family: "Outfit", sans-serif;
+}
+.swiper-slide:nth-child(4),
+.swiper-slide:nth-child(8) {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+footer {
+  padding: 50px 10px;
+  background-color: rgb(19, 46, 90);
+}
+footer .logo {
+  color: #fff;
+  font-family: "Pacifico", sans-serif;
+  font-size: 32px;
+  text-align: center;
+  /* margin-bottom: 100px; */
+}
+footer menu {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+footer menu li {
+  margin: 0 50px;
+}
+footer menu li a {
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+}
+footer p {
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+}
+footer p span {
+  font-size: 24px;
+}
+footer .sns {
+  width: 30%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
+}
+footer .sns i {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
