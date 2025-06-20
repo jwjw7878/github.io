@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazy Planner</title>
+    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./page1_css/page1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./page1_js/jquery-3.7.1.min.js"></script>
+    <script src="./page1_js/page1.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <header /> -->
+      <header>
+        <a href="#" class="logo"><span>Lazy</span><br /><span>Planner</span></a>
+        <ul class="menu">
+          <li><a href="#">여행지</a></li>
+          <li><a href="#">고객지원</a></li>
+          <li><a href="#">이용방법</a></li>
+          <li><a href="#">로그인</a></li>
+
+          <i class="fa-solid fa-cart-shopping">
+            <div class="count-icon"></div>
+          </i>
+          <i class="fa-solid fa-house"> </i>
+        </ul>
+        <i class="fa-solid fa-bars"></i>
+      </header>
+      <!-- <main />-->
+      <main>
+        <!-- section1 -->
+        <section class="section1">
+          <div class="section-text">
+            <h2>
+              여행은 가고 싶은데 알아봐야 할 것들이<br />
+              너무 많은 사람을 위한 플래너
+            </h2>
+            <p>저희 <span>Lazy Planner</span> 와 해결해 보시겠습니까?</p>
+            <button class="play-btn">시작하기</button>
+          </div>
+          <div class="section-image">
+            <div class="image-inner">
+              <div class="front-img"></div>
+              <div class="back-img"></div>
+            </div>
+          </div>
+        </section>
+        <!-- section2 -->
+        <section class="section2">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="slide-inner">
+                  <div class="slide-img slide-img1"></div>
+                  <div class="slide-text">
+                    <h2>
+                      피렌체 대성당 관람 시<br />좋은 꿀팁을 알고 계신가요?
+                    </h2>
+                    <p>
+                      이탈리아 피렌체를 방문한 길동씨는
+                      <span>Lazy Planner</span>를 통해 돔과 종탑은 인기가 많아
+                      현장 구매가 어렵다는 것을 알고 사전 예약을 미리 할 수
+                      있었어요
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-inner">
+                  <div class="slide-img slide-img2"></div>
+                  <div class="slide-text">
+                    <h2>6월 ~ 8월 성수기<br />마추픽추 관광 예약은 필수!</h2>
+                    <p>
+                      세계 배낭여행을 즐기는 민구씨는 올 여름에 마추픽추를
+                      예약하기 위해 <span>Lazy Planner</span> 예매 서비스를 통해
+                      미리 계획을 세울 수 있었어요.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-inner">
+                  <div class="slide-img slide-img3"></div>
+                  <div class="slide-text">
+                    <h2>에펠탑의 아름다운 야경은<br />트로카데로 광장에서~</h2>
+                    <p>
+                      에펠탑의 아름다운 야경을 볼 수 있는 트로카데로 광장에
+                      가는법과 주변 추천 장소를
+                      <span>Lazy Planner</span> 에디터가 준비해 보았어요.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </section>
+        <!-- section3 -->
+        <section class="section3">
+          <div class="content-box event">
+            <div class="box-text">
+              <p><span>Lazy Planner</span> X lorem 이벤트</p>
+              <p><span>Lazy Planner</span> 특별 할인 이벤트</p>
+            </div>
+            <div class="event-badge">이벤트</div>
+            <div class="warning-badge">마감 임박</div>
+          </div>
+          <div class="content-box hotel">
+            <div class="box-text">
+              <p><span>Lazy Planner</span> X lorem Hotel 제휴</p>
+              <p><span>Lazy Planner</span> 호텔 예약</p>
+            </div>
+            <div class="coalition-badge">제휴</div>
+          </div>
+          <div class="content-box plane">
+            <div class="box-text">
+              <p><span>Lazy Planner</span> X lorem 항공 제휴</p>
+              <p><span>Lazy Planner</span> 항공권 예약</p>
+            </div>
+            <div class="coalition-badge">제휴</div>
+          </div>
+        </section>
+        <!-- section4 -->
+        <section class="section4">
+          <div class="section4-text">
+            <h2><span>Lazy Planner</span> 매거진</h2>
+            <p>
+              <span>Lazy Planner</span> 에디터가 여행 준비에 도움이 되는 다양한
+              컨텐츠를 준비해보았어요
+            </p>
+          </div>
+          <button id="look-btn">보러가기</button>
+        </section>
+        <!-- section5 -->
+        <section class="section5">
+          <h2>어디로 여행을 떠나시나요?</h2>
+          <p>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="국가명이나 도시명을 입력해보세요"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </p>
+          <div class="image-card-area"></div>
+        </section>
+      </main>
+      <!-- <footer /> -->
+
+      <div class="message-icon">
+        <i class="fa-solid fa-message"></i>
+      </div>
+      <div class="back-top">
+        <i class="fa-solid fa-house-chimney"></i>
+      </div>
+    </div>
+    <footer>
+      <div class="company-intro">
+        <p class="brand">Lazy Planner</p>
+        <p class="txt">주식회사 Lazy Planner</p>
+        <p class="txt">사업자 등록번호: 111-12345</p>
+        <p class="txt">서울특별시 OO구 OO동</p>
+        <p class="intro">
+          <a href="#">이용약관</a><a href="#">개인정보처리방침</a
+          ><a href="#">고객지원</a><a href="#">1:1문의</a>
+        </p>
+        <p class="txt">Copyright © All Right Reserved</p>
+      </div>
+      <div class="sns">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </footer>
+    <div class="popup">
+      <!-- <i class="fa-solid fa-xmark"></i> -->
+      <div class="popup-image"></div>
+      <div class="popup-country"></div>
+      <div class="popup-capital"></div>
+      <div class="popup-language"></div>
+      <div class="popup-population"></div>
+    </div>
+    <div class="thumbs-basket"></div>
+  </body>
+</html>
