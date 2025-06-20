@@ -161,10 +161,11 @@ main .section1 .box {
   margin: 50px 50px;
   border-radius: 12px;
   list-style: none;
-  background: linear-gradient(to right, #000000, #808080, #000000);
-  color: #fff;
-  width: 50%;
-  font-size: 18px;
+  color: #808080;
+  width: 45%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
 }
 .box li {
   margin: 20px 0;
