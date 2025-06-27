@@ -502,7 +502,6 @@ main section h2 {
   transition-timing-function: ease-in-out;
 }
 .ad-section .swiper-wrapper {
-  transition-timing-function: linear !important;
   position: relative;
 }
 .ad-section .swiper-slide {
@@ -515,21 +514,21 @@ main section h2 {
   align-items: center;
   font-size: 32px;
 }
-.swiper-slide:nth-child(1),
-.swiper-slide:nth-child(5),
-.swiper-slide:nth-child(9) {
+.swiper-slide.ad:nth-child(1),
+.swiper-slide.ad:nth-child(5),
+.swiper-slide.ad:nth-child(9) {
   font-family: "Pacifico", sans-serif;
 }
-.swiper-slide:nth-child(2),
-.swiper-slide:nth-child(6) {
+.swiper-slide.ad:nth-child(2),
+.swiper-slide.ad:nth-child(6) {
   font-family: "Lobster", cursive;
 }
-.swiper-slide:nth-child(3),
-.swiper-slide:nth-child(7) {
+.swiper-slide.ad:nth-child(3),
+.swiper-slide.ad:nth-child(7) {
   font-family: "Outfit", sans-serif;
 }
-.swiper-slide:nth-child(4),
-.swiper-slide:nth-child(8) {
+.swiper-slide.ad:nth-child(4),
+.swiper-slide.ad:nth-child(8) {
   font-family: "Noto Sans KR", sans-serif;
 }
 
