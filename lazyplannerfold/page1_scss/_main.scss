@@ -1,0 +1,453 @@
+// scss/_main.scss
+main {
+  width: 100%;
+  padding: 20px;
+
+  .section1 {
+    width: 100%;
+    margin: 150px auto 100px;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+
+    .section-text {
+      width: 40%;
+
+      h2,
+      p {
+        margin: 36px 0;
+        font-family: $font-sunflower;
+      }
+
+      h2 {
+        margin-top: 50px;
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    .section-image {
+      width: 40%;
+      height: 400px;
+      margin-left: 30px;
+      perspective: 1000px;
+
+      .image-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.5;
+      }
+
+      .front-img,
+      .back-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        backface-visibility: hidden;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .front-img {
+        background-image: url(/lazyplannerfold/image/main-img.jpg);
+      }
+
+      .back-img {
+        background-image: url(/lazyplannerfold/image/airport.jpg);
+        transform: rotateY(180deg);
+      }
+    }
+
+    // 미디어 쿼리 - 767px 이하
+    @media screen and (max-width: $breakpoint-mobile) {
+      .section-text {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+          text-align: center;
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+
+      .section-image {
+        display: none;
+      }
+    }
+  }
+
+  .section2 {
+    width: 100%;
+    margin: 100px 0 80px;
+
+    .swiper {
+      // 기존 .section2 .swiper, .swiper 중복 제거
+      width: 100%;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
+      background-color: $medium-gray-bg;
+      box-shadow: 6px 3px 12px $shadow-color-black;
+      overflow: hidden;
+
+      .slide-inner {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide {
+        .slide-img1,
+        .slide-img2,
+        .slide-img3 {
+          border-radius: 12px;
+          width: 35%;
+          height: 350px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+
+        .slide-img1 {
+          background-image: url(../image/florence-cathedral.jpg);
+        }
+        .slide-img2 {
+          background-image: url(../image/macchu-picchu.jpg);
+        }
+        .slide-img3 {
+          background-image: url(../image/eiffel-tower.jpg);
+        }
+
+        .slide-text {
+          width: 40%;
+          margin-left: 80px;
+
+          h2,
+          p {
+            font-family: $font-sunflower;
+          }
+
+          h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+
+    // 미디어 쿼리 - 767px 이하
+    @media screen and (max-width: $breakpoint-mobile) {
+      .slide-inner {
+        width: 80%;
+        margin: auto;
+
+        .slide-img {
+          // 이 클래스가 HTML에 있다면 .slide-img1,2,3을 통합할 수 있습니다.
+          width: 100%;
+        }
+      }
+      .slide-text {
+        display: none; // 모바일에서 슬라이드 텍스트 숨김
+      }
+    }
+  }
+
+  .section3 {
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .content-box {
+      position: relative;
+      width: 30%;
+      height: 250px;
+      border-radius: 12px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: $font-sunflower;
+      cursor: pointer;
+      transition: all 0.5;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      // 이미지 배경
+      &.event {
+        background-image: url(/lazyplannerfold/image/event.jpg);
+      }
+      &.hotel {
+        background-image: url(/lazyplannerfold/image/hotel.jpg);
+      }
+      &.plane {
+        background-image: url(/lazyplannerfold/image/airplane-3702676_1280.jpg);
+      }
+
+      .event-badge,
+      .coalition-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 30px;
+        background-color: white;
+        border-radius: 4px;
+        color: $dark-gray;
+        text-align: center;
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .warning-badge {
+        position: absolute;
+        top: 10px;
+        right: 80px;
+        width: 50px;
+        height: 30px;
+        background-color: $warning-red;
+        border-radius: 4px;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .box-text {
+        position: absolute;
+        bottom: 10px;
+        left: 18px;
+        color: white;
+        font-weight: 700;
+      }
+    }
+
+    // 미디어 쿼리 - 767px 이하
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-bottom: 700px; // 특정 섹션에만 적용되는 마진 조정
+      .content-box {
+        width: 90%;
+        margin: 50px auto;
+      }
+    }
+  }
+
+  .section4 {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    background-image: url(/lazyplannerfold/image/bookcases-1869616_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+
+    .section4-text {
+      margin: 30px 50px;
+    }
+
+    h2,
+    p {
+      font-family: $font-sunflower;
+      color: white;
+    }
+
+    h2 {
+      font-size: 52px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    button {
+      position: absolute;
+      bottom: 100px;
+      right: 100px;
+      background-color: white;
+      color: $dark-gray;
+
+      &:hover {
+        background-color: $main-blue;
+        color: white;
+      }
+    }
+
+    // 미디어 쿼리 - 767px 이하
+    @media screen and (max-width: $breakpoint-mobile) {
+      h2 {
+        font-size: 20px;
+        text-align: center;
+        margin: 20px auto 30px;
+      }
+
+      p {
+        font-size: 18px;
+        text-align: center;
+      }
+
+      button {
+        position: static; // fixed에서 static으로 변경
+        display: block;
+        margin: 20px auto;
+      }
+    }
+  }
+
+  .section5 {
+    width: 100%;
+    margin: 80px 0;
+
+    h2,
+    p,
+    input::placeholder {
+      font-family: $font-sunflower;
+    }
+
+    h2 {
+      font-size: 48px;
+      text-align: center;
+    }
+
+    p {
+      width: 70%;
+      margin: 40px auto;
+      position: relative;
+    }
+
+    .image-card-area {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 300px 1fr;
+      padding: 20px;
+      gap: 20px;
+      height: 500px;
+      overflow-y: auto;
+
+      &:has(.unknown) {
+        // :has() 선택자는 비교적 최신 문법으로 모든 브라우저 지원을 확인해야 합니다.
+        display: block;
+        padding: 0;
+        gap: 0;
+        height: auto;
+      }
+
+      .card {
+        position: relative;
+        border: 1px solid $border-gray;
+        padding: 10px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.5;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        .image {
+          width: 100%;
+          background-color: gray;
+          height: 120px;
+        }
+
+        p {
+          text-align: start;
+          margin: 20px 0;
+        }
+
+        .country {
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        .capital {
+          font-size: 16px;
+          color: #797979;
+        }
+
+        i {
+          font-size: 32px;
+          position: absolute;
+          right: 10px;
+          bottom: 10px;
+        }
+      }
+
+      .unknown {
+        width: 100%;
+        text-align: center;
+        font-size: 44px;
+        color: $main-blue;
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 4px 4px 10px $shadow-color-dark;
+    }
+
+    .fa-magnifying-glass {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    // 미디어 쿼리 - 1024px 이하
+    @media screen and (max-width: $breakpoint-tablet) {
+      .image-card-area {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    // 미디어 쿼리 - 767px 이하
+    @media screen and (max-width: $breakpoint-mobile) {
+      h2 {
+        font-size: 24px;
+      }
+
+      .image-card-area {
+        gap: 50px;
+        grid-template-columns: repeat(
+          1,
+          1fr
+        ); // 1fr로 수정 (원래 150px, 1fr은 오류)
+
+        .card:hover {
+          transform: scale(0.8); // 모바일에서 호버 시 스케일 축소
+        }
+      }
+    }
+  }
+}

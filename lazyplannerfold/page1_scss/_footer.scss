@@ -1,0 +1,71 @@
+// scss/_footer.scss
+
+footer {
+  background-color: $footer-bg;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+
+  .brand {
+    font-size: 20px;
+  }
+
+  p {
+    margin: 20px 0;
+  }
+
+  .txt {
+    font-family: $font-sunflower;
+    font-size: 12px;
+    color: $text-gray;
+  }
+
+  .intro {
+    margin: 30px 0;
+  }
+
+  p a {
+    margin-right: 20px;
+    color: $dark-gray;
+    font-weight: 400;
+    position: relative;
+    font-family: $font-sunflower;
+
+    &:not(:last-child)::after {
+      // :not(footer p a:last-child) 를 더 간결하게 변경
+      position: absolute;
+      top: 0px;
+      right: -10px;
+      content: "";
+      height: 16px;
+      width: 2px;
+      background-color: $dark-gray;
+    }
+  }
+
+  .sns a {
+    display: inline-block;
+    color: $dark-gray;
+    position: relative;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 20px 10px;
+
+    i {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  // 미디어 쿼리 - 767px 이하
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: block; // flex에서 block으로 변경
+    text-align: center;
+  }
+}

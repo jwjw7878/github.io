@@ -1,0 +1,62 @@
+// scss/_popup.scss
+
+.popup {
+  position: fixed;
+  z-index: $z-index-popup;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  height: 500px;
+  background-color: #f7f7f7; // 직접적인 값 사용 (변수 필요 시 추가)
+  border-radius: 12px;
+  display: none; // JavaScript로 제어
+  opacity: 0; // JavaScript로 제어
+  cursor: pointer;
+  transition: all 0.5;
+  font-family: $font-sunflower;
+  text-align: center;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4); // 직접적인 값 사용 (변수 필요 시 추가)
+
+  .popup-image {
+    width: 80%;
+    margin: 40px auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .popup-country {
+    font-size: 36px;
+    font-weight: 800;
+    margin: 40px 0;
+  }
+
+  .popup-language {
+    margin: 20px 0;
+  }
+
+  .fa-xmark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 48px;
+  }
+
+  // 미디어 쿼리 - 767px 이하
+  @media screen and (max-width: $breakpoint-mobile) {
+    height: 50%; // 모바일에서 팝업 높이 조정
+  }
+}
+
+// JavaScript에서 제어되는 클래스들
+.active {
+  display: block;
+  opacity: 1;
+}
+
+.thumbs-active {
+  color: rgba(230, 220, 92, 0.904); // 직접적인 값 사용 (변수 필요 시 추가)
+}

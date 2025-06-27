@@ -1,0 +1,20 @@
+// scss/style.scss
+
+// 폰트 임포트
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@300&family=WDXL+Lubrifont+TC&display=swap");
+
+// 변수 파일 임포트
+@import "variables";
+
+// 기본 및 공통 스타일 임포트
+@import "base";
+
+// 각 섹션/컴포넌트 스타일 임포트
+@import "header";
+@import "main";
+@import "footer";
+@import "popup";
+
+// 미디어 쿼리는 각 컴포넌트 파일 내에 중첩되어 있으므로 별도의 responsive 파일은 필요 없습니다.

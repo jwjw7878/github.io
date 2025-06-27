@@ -1,0 +1,130 @@
+// scss/_header.scss
+
+header {
+  position: fixed;
+  z-index: $z-index-fixed-header;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 7px 10px 1px $shadow-color-light;
+
+  .logo {
+    color: $main-blue;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 5px;
+    margin-left: 40px;
+    font-family: $font-playwrite;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+    padding: 5px;
+    margin-right: 40px;
+    font-family: $font-sunflower;
+
+    li {
+      a {
+        margin: 0 24px;
+        position: relative;
+        text-decoration: none;
+        color: $dark-gray;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          bottom: -10px;
+          left: 0;
+          height: 3px;
+          background-color: $main-blue;
+          transition: all 0.5;
+          transform-origin: right;
+        }
+      }
+
+      &:hover a::after {
+        width: 100%;
+      }
+
+      &:hover a {
+        color: $main-blue;
+      }
+    }
+  }
+
+  i {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .fa-bars {
+    display: none;
+  }
+
+  .fa-cart-shopping {
+    margin: 0 30px 0 50px;
+  }
+
+  .count-icon {
+    position: absolute;
+    z-index: $z-index-count-icon;
+    bottom: 20px;
+    left: 10px;
+    width: 40px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: $highlight-yellow;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    display: none;
+  }
+
+  // 미디어 쿼리 - 767px 이하
+  @media screen and (max-width: $breakpoint-mobile) {
+    position: relative; // 헤더 위치 변경
+
+    .fa-bars {
+      display: block;
+      margin-right: 20px;
+    }
+
+    ul {
+      position: absolute;
+      top: 110px;
+      right: 0;
+      flex-direction: column;
+      width: 100%;
+      background-color: $border-gray;
+      padding: 0;
+      margin: 0;
+      height: 0px;
+      overflow: hidden;
+      transition: all 0.5;
+
+      li {
+        line-height: 50px;
+        width: 100%;
+        height: 50px;
+        text-align: right;
+        border-bottom: 3px solid $footer-bg;
+      }
+    }
+
+    // 숨김 처리될 아이콘들
+    .fa-cart-shopping,
+    .fa-house {
+      display: none;
+    }
+  }
+}

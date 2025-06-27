@@ -1,0 +1,28 @@
+// Colors
+$main-blue: rgb(167, 237, 255);
+$dark-gray: #333;
+$light-gray-bg: rgb(245, 245, 245);
+$medium-gray-bg: rgb(236, 236, 236);
+$footer-bg: rgb(231, 231, 231);
+$text-gray: #595959;
+$border-gray: #ddd;
+$shadow-color-light: rgba(185, 185, 185, 0.61);
+$shadow-color-dark: rgba(0, 0, 0, 0.582);
+$shadow-color-black: black;
+$highlight-yellow: rgba(230, 220, 92);
+$warning-red: rgb(238, 66, 14);
+
+// Fonts
+$font-playwrite: "Playwrite HU", cursive;
+$font-single-day: "Single Day", cursive;
+$font-sunflower: "Sunflower", sans-serif;
+
+// Z-index
+$z-index-fixed-header: 9999;
+$z-index-count-icon: 9999;
+$z-index-popup: 5;
+$z-index-floating-buttons: 1;
+
+// Breakpoints
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 767px;

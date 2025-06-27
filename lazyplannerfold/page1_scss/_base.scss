@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+body {
+  background-color: $light-gray-bg;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+// 공통 폰트 스타일 (변수 사용)
+.content-box span,
+.section4 span,
+.section-text span,
+.slide-text span,
+footer .brand {
+  font-family: $font-playwrite;
+  color: $main-blue;
+  font-weight: 700;
+}
+
+// 공통 버튼 스타일 (변수 사용)
+.section-text button,
+.section4 button {
+  padding: 20px 36px;
+  border: none;
+  background-color: $dark-gray;
+  color: white;
+  font-family: $font-single-day;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: all 0.5;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $main-blue;
+  }
+}
+
+// 공통 버튼 스타일 믹스인
+@mixin floating-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: $z-index-floating-buttons;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.message-icon {
+  @include floating-button;
+  position: fixed;
+  bottom: 180px;
+  right: 50px;
+  background-color: $dark-gray;
+
+  &:hover {
+    background-color: white;
+    .fa-message {
+      color: $dark-gray;
+    }
+  }
+
+  .fa-message {
+    color: white;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+.back-top {
+  @include floating-button;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  background-color: $main-blue;
+
+  &:hover {
+    background-color: white;
+    .fa-house-chimney {
+      color: black;
+    }
+  }
+
+  .fa-house-chimney {
+    width: 50%;
+    text-align: center;
+    color: white;
+  }
+}
