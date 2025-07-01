@@ -471,7 +471,7 @@ main .section4 button:hover {
   main .section4 h2 {
     font-size: 20px;
     text-align: center;
-    margin: 20px auto 30px;
+    margin: 10px auto 30px;
   }
   main .section4 p {
     font-size: 18px;
@@ -532,11 +532,11 @@ main .section5 .image-card-area .card:hover {
 main .section5 .image-card-area .card .image {
   width: 100%;
   background-color: gray;
-  height: 120px;
+  height: 100px;
 }
 main .section5 .image-card-area .card p {
   text-align: start;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 main .section5 .image-card-area .card .country {
   font-size: 24px;
@@ -694,6 +694,13 @@ footer .sns a i {
   .popup {
     height: 50%;
   }
+}
+.popup .popup-image {
+  margin: 20px auto;
+}
+.popup .popup-country {
+  margin: 20px auto;
+  font-size: 24px;
 }
 
 .active {

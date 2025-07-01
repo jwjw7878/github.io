@@ -1,4 +1,6 @@
 // scss/_main.scss
+@use "variables" as *;
+
 main {
   width: 100%;
   padding: 20px;
@@ -304,7 +306,7 @@ main {
       h2 {
         font-size: 20px;
         text-align: center;
-        margin: 20px auto 30px;
+        margin: 10px auto 30px;
       }
 
       p {
@@ -375,12 +377,12 @@ main {
         .image {
           width: 100%;
           background-color: gray;
-          height: 120px;
+          height: 100px;
         }
 
         p {
           text-align: start;
-          margin: 20px 0;
+          margin: 10px 0;
         }
 
         .country {
